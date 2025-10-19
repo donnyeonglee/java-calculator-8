@@ -58,5 +58,8 @@ public class Application {
                 System.out.println("입력받은 숫자 : " + num + ", 현재까지 합 : " + sum); //테스트 출력
             }
         }
+
+        // 4.덧셈 결과 출력 기능
+        System.out.println("결과 : " + sum.stripTrailingZeros().toPlainString());
     }
 }
