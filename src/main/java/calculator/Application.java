@@ -21,10 +21,10 @@ public class Application {
         // 2. 입력받은 문자열로부터 구분자를 식별해 문자열 배열을 생성하는 기능
         // 커스텀 구분자가 지정된 경우, 문자열 앞부분의 "//"와 "\n" 사이에 위치하는 문자와 기본 구분자(쉼표, 콜론)를 구분자로 사용.
         if (rawInputString.matches("^//.*\\\\n.*$")) {
-            int sepDeclarationStartIndex = rawInputString.indexOf("//");
-            int sepDeclarationEndIndex = rawInputString.indexOf("\\n");
-            sep = rawInputString.substring(sepDeclarationStartIndex + 2, sepDeclarationEndIndex) + "|,|:";
-            inputString = rawInputString.substring(sepDeclarationEndIndex+2);
+            int sepDeclStartIndex = rawInputString.indexOf("//");
+            int sepDeclEndIndex = rawInputString.indexOf("\\n");
+            sep = rawInputString.substring(sepDeclStartIndex + 2, sepDeclEndIndex) + "|,|:";
+            inputString = rawInputString.substring(sepDeclEndIndex+2);
         }
         // 커스텀 구분자가 지정되지 않은 경우, 쉼표(,) 또는 콜론(:)을 구분자로 사용.
         else {
@@ -52,10 +52,8 @@ public class Application {
                     throw new IllegalArgumentException("잘못된 입력입니다." + e.getMessage());
                 }
             }
-            else { // 배열의 요소가 비어 있는 경우 0으로 취급하여 덧셈에서 제외
-                num = new BigDecimal("0");
-                sum = sum.add(num);
-                System.out.println("입력받은 숫자 : " + num + ", 현재까지 합 : " + sum); //테스트 출력
+            else { // 배열의 요소가 비어 있는 경우 덧셈에서 제외
+                continue;
             }
         }
 
