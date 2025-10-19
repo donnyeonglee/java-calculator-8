@@ -16,7 +16,7 @@ public class Application {
         // 1. 문자열 입력 기능
         System.out.println("덧셈할 문자열을 입력해 주세요.");
         rawInputString = Console.readLine();
-        System.out.println("입력한 문자열 : " + rawInputString); // 테스트 출력
+        //System.out.println("입력한 문자열 : " + rawInputString); // 테스트 출력
 
         // 2. 입력받은 문자열로부터 구분자를 식별해 문자열 배열을 생성하는 기능
         // 커스텀 구분자가 지정된 경우, 문자열 앞부분의 "//"와 "\n" 사이에 위치하는 문자와 기본 구분자(쉼표, 콜론)를 구분자로 사용.
@@ -31,12 +31,12 @@ public class Application {
             sep = ",|:";
             inputString = rawInputString;
         }
-        System.out.println("구분자 = " + sep); // 테스트 출력
+        //System.out.println("구분자 = " + sep); // 테스트 출력
 
         // 구분자를 기준으로 문자열을 분리해 문자열 배열 생성.
         String[] strArr = inputString.split(sep);
         // 테스트 출력
-        for (String str : strArr) System.out.println("입력받은 숫자 : " + str);
+        //for (String str : strArr) System.out.println("입력받은 숫자 : " + str);
 
         // 3.문자열 배열의 각 배열 요소를 형변환 후 덧셈 연산하는 기능
         for (String str : strArr) {
@@ -47,7 +47,7 @@ public class Application {
                     }
                     num = new BigDecimal(str); // 배열 요소가 숫자가 아닌 경우 예외 발생
                     sum = sum.add(num); // 배열 요소가 정상적인 경우 sum에 더함
-                    System.out.println("입력받은 숫자 : " + num + ", 현재까지 합 : " + sum); //테스트 출력
+                    //System.out.println("입력받은 숫자 : " + num + ", 현재까지 합 : " + sum); //테스트 출력
                 } catch (Exception e) {
                     throw new IllegalArgumentException("잘못된 입력입니다." + e.getMessage());
                 }
