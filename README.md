@@ -11,6 +11,6 @@ camp.nextstep.edu.missionutils.Console의 readLine()을 활용해 사용자로�
 구분자를 기준으로 문자열을 분리해 문자열 배열 생성.      
     
 **3.문자열 배열의 각 배열 요소를 형변환 후 덧셈 연산하는 기능**    
-배열 요소가 잘못된 값 (음수, 숫자가 아닌 값을 포함)일 경우 IllegalArgumentException을 발생시킨 후 애플리케이션 종료.     
+배열 요소가 잘못된 값 (양수가 아닌 수, 숫자가 아닌 값을 포함)일 경우 IllegalArgumentException을 발생시킨 후 애플리케이션 종료.     
     
 **4.덧셈 결과 출력 기능**    
