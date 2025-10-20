@@ -49,7 +49,7 @@ public class Application {
                     sum = sum.add(num); // 배열 요소가 정상적인 경우 sum에 더함
                     //System.out.println("입력받은 숫자 : " + num + ", 현재까지 합 : " + sum); //테스트 출력
                 } catch (Exception e) {
-                    throw new IllegalArgumentException("잘못된 입력입니다." + e.getMessage());
+                    throw new IllegalArgumentException("잘못된 입력입니다.\n에러 메세지 : " + e.getMessage());
                 }
             }
             else { // 배열의 요소가 비어 있는 경우 덧셈에서 제외
